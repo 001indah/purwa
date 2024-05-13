@@ -1,11 +1,17 @@
 import React from 'react';
 import Card from './Card';
+import Image from 'next/image';
+import logoWhite from '@/public/logoWhite.webp'
 
 const Footer = () => {
     return (
         <div className='bg-hijauTua w-full p-10'>
             <div className='flex justify-center'>
-                <img src="logoWhite.png" alt="" className='h-7 lg:h-10' />
+                <Image
+                    alt="logo"
+                    src={logoWhite}
+                    className='h-7 lg:h-10 w-auto'
+                />
             </div>
 
             <div className='lg:grid lg:grid-cols-[1fr,1fr,1fr,1fr] lg:p-6'>

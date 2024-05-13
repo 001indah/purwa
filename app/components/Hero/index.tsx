@@ -1,6 +1,9 @@
 import React from 'react'
 import FactNum from '../FactNum';
 import Label from '../Label';
+import tubnailVideo from '@/public/thumbnailVideo.webp'
+import playButton from '@/public/ic_play.svg'
+import Image from 'next/image';
 
 const Programs = [
     { program: "Software development" },
@@ -39,8 +42,17 @@ const Hero: React.FC = () => {
                             </div>
                         </div>
                         <div className="relative overflow-hidden rounded-lg">
-                            <img src="thumbnailVideo.webp" alt="" className="hover:scale-110 ease-in-out duration-500 object-cover rounded-lg" />
-                            <img src="ic_play.svg" alt="" className="absolute inset-0 m-auto w-[50px]" />
+                            <Image
+                                alt="tubnailVideo"
+                                src={tubnailVideo}
+                                className='hover:scale-110 ease-in-out duration-500 object-cover rounded-lg'
+                            />
+                            <Image
+                                alt="playButton"
+                                src={playButton}
+                                className="absolute inset-0 m-auto w-[50px]"
+                            />
+
                         </div>
                     </div>
                     <FactNum />

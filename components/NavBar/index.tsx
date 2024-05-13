@@ -3,6 +3,9 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Label from '@/app/components/Label';
+import graycycleLogo from '@/public/logoWhite.webp'
+import colorsLogo from '@/public/logo.webp'
+import Image from 'next/image';
 
 const Header = () => {
     //hamburger
@@ -34,7 +37,12 @@ const Header = () => {
                 <div className='w-full lg:px-4'>
                     <div className='lg:grid lg:grid-cols-[3fr,2fr] flex items-center justify-between relative'>
                         <div>
-                            <img src={`${isNavbarFixed ? 'logo.png' : 'logoWhite.png'}`} alt="" className='h-7 block m-4' />
+                            <Image
+                                alt="logo"
+                                src={isNavbarFixed ? colorsLogo : graycycleLogo}
+                                height={28}
+                                style={{ display: 'block', margin: '16px' }}
+                            />
                         </div>
                         <button onClick={handleClick} className='hamburger block absolute right-2 p-4 lg:hidden'>
                             <span className={`w-[30px] h-[2px] my-2 block ${isNavbarFixed ? ' bg-black' : 'bg-white'}  ease-in-out duration-500 ${isOpen ? 'origin-top-left rotate-45' : ''}`}></span>
